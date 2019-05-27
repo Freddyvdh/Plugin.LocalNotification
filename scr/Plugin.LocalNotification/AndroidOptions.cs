@@ -8,6 +8,12 @@ namespace Plugin.LocalNotification
     public class AndroidOptions
     {
         /// <summary>
+        /// if Set, find the icon by name from drawable and set it has the Small Icon to use in the notification layouts.
+        /// if not set, application Icon will we used.
+        /// </summary>
+        public string IconName { get; set; }
+
+        /// <summary>
         /// Setting this flag will make it so the notification is automatically canceled when the user clicks it in the panel.
         /// </summary>
         public bool AutoCancel { get; set; } = true;

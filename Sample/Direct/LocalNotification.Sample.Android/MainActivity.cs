@@ -23,7 +23,10 @@ namespace LocalNotification.Sample.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
 
-            NotificationCenter.NotifyNotificationTapped(this.Intent);
+            NotificationCenter.Init(this.Intent, new Plugin.LocalNotification.Platform.Droid.NotificationChannelRequest
+            {
+                Sound = Resource.Raw.good_things_happen.ToString()
+            });
         }
 
         protected override void OnNewIntent(Intent intent)
